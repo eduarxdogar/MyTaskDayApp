@@ -1,3 +1,39 @@
+# TodoApp 📝
+
+Una aplicación web para la gestión de tareas personales, desarrollada en Angular. Esta app permite a los usuarios organizar su día a día mediante la creación, edición, eliminación y categorización de tareas en pendientes y completadas. 🚀
+
+---
+
+## Funcionalidades ✨
+
+1. **Crear tareas:** Agrega nuevas tareas a tu lista con facilidad.
+2. **Editar tareas:** Modifica el título o detalles de una tarea existente.
+3. **Eliminar tareas:** Borra tareas que ya no sean necesarias.
+4. **Panel de tareas:** 
+   - **Pendientes:** Visualiza las tareas aún por completar.
+   - **Completadas:** Revisa las tareas finalizadas para llevar un registro de tu progreso.
+5. **Interfaz amigable:** Diseño intuitivo y fácil de usar.
+
+---
+
+## Tecnologías utilizadas 🛠️
+
+- **Frontend:** Angular 18
+- **Backend:** Sin integración (por ahora)
+- **Hosting:** Firebase Hosting
+
+---
+
+## Instalación y ejecución 🖥️
+
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com/tu-usuario/todoapp.git
+
+
+
+
+
 # Todoapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
