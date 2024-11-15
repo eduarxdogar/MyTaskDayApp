@@ -31,6 +31,22 @@ Una aplicación web para la gestión de tareas personales, desarrollada en Angul
    git clone https://github.com/tu-usuario/todoapp.git
 
 
+  # Próximas mejoras 🌟
+Implementar categorías o etiquetas para tareas.
+Agregar recordatorios y notificaciones.
+Añadir soporte para usuarios múltiples.
+Crear una vista semanal para mejor planificación.
+Contribución 🤝
+Si tienes ideas o sugerencias para mejorar la aplicación, no dudes en abrir un issue o enviar un pull request. ¡Toda contribución es bienvenida!
+
+ # Autor ✍️
+## Cristian Eduardo Garzon Roa
+Desarrollador apasionado por crear herramientas prácticas y útiles para la vida cotidiana.
+
+Demo 🚀
+Prueba la aplicación en el siguiente enlace: https://todoapp-4d61c.web.app/home
+
+
 
 
 
