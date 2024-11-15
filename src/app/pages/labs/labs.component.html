@@ -1,0 +1,128 @@
+< class="container">
+<h1>mi primer proyecto</h1>
+<h2>{{welcome}}</h2>
+<ul>
+  @for (task of tasks(); track task) {
+    <li>
+      {{task}}
+    </li>
+  }
+</ul>
+<hr />
+<h2>{{ 'hola '.repeat(4)}}</h2>
+<p>La suma de 3 + 3 es {{3 + 3}}</p>
+<p>Hola, soy {{ name() }} y mi edad es {{ person().age }}</p>
+<hr />
+<img [src]="person().avatar" alt="Avatar">
+<input type="number" [value]="person().age">
+<button [disabled]="disabled">Click me</button>
+<p>Person: {{ person().nombre }}</p>
+<hr />
+<button (click)="clickHandler()">Click me</button>
+<button (dblclick)="clickHandler()">Double click me</button>
+<p>(change)</p>
+<input type="number" [value]="person().age" (change)="changeHandler($event)">
+<p>(keydown)</p>
+<input type="text" [value]="person().nombre" (keydown)="keydownHandler($event)">
+<p>(change)</p>
+<input type="text" [value]="person().nombre" (change)="changeHandler($event)">
+<p>(keydown shift.t)</p>
+<input type="text" [value]="person().nombre" (keydown.shift.t)="clickHandler()">
+<hr />
+<ul>
+  <p>Total: {{ tasks().length }}</p>
+  @for (task of tasks(); track task; let i = $index) {
+    <li>
+      {{i}}. {{task}}
+    </li>
+  }
+</ul>
+<h1>Signals</h1>
+<input type="text" [value]="name()" (change)="changeHandler($event)">
+<p>Name: {{ name() }}</p>
+<hr />
+@if (1 != 1) {
+  <div>
+    My content
+  </div>
+}
+@if (name() === 'nicolas') {
+  <div>
+    Soy nicolás
+  </div>
+}
+@if (name() === 'nicolas') {
+  <div>
+    soy nicolas
+  </div>
+}
+<input type="number" [value]="person().age" (change)="changeAge($event)">
+@if (person().nombre === 'nicolas' && person().age > 18) {
+  <div>
+    Soy nicolás y soy mayor de 18
+  </div>
+} @else {
+  Soy nicolás y soy menor de 18
+}
+<h2>if else nwe sinx</h2>
+@if(person().nombre === 'nicolas' && person().age > 18){
+  <div>soy nico y tengo18 :P</div>
+} @else {
+  <div>soy nico y soy menor :3</div>
+}
+<hr />
+<input type="text" [value]="person().nombre" (change)="changeName($event)">
+<div>
+  @switch (person().nombre) {
+    @case ('nicolas') {
+      <p>Yo soy nicolás</p>
+    }
+    @case ('camilo') {
+      <p>Yo soy camilo</p>
+    }
+    @case ('cristian') {
+      <p>Yo soy cristian</p>
+    }
+    @default {
+      <p>Yo no soy nadie</p>
+    }
+  }
+</div>
+<hr />
+<input type="color" [formControl]="colorCtl">
+<p>color: {{ colorCtl.value }}</p>
+<svg>
+  <g>
+    <rect x ="0" y="0" height="100" width="100" [attr.fill]="colorCtl.value"></rect>
+  </g>
+</svg>
+<hr />
+<input type="number" [formControl]="widthCtrl">
+<span class="box" [style.width.px]="widthCtrl.value"></span>
+<hr />
+<p>
+  <input type="text" [formControl]="nameCtrl"> <br>
+  <span class="message-error" [class.show]="nameCtrl.invalid && nameCtrl.touched">Nombre ivalido</span>
+</p>
+<p>
+  <input type="text">
+</p>
+<div>
+  <hr />
+  <h2>new for</h2>
+  <ul>
+    <p>Total: {{ tasks().length }}</p>
+    @for (task of tasks(); track task; let i = $index) {
+      <li>
+        {{i}}. {{task}}
+      </li>
+    }
+  </ul>
+  <ul>
+    @for (task of tasks(); track task; let i = $index) {
+      <li>{{ i }}  {{  task }}</li>
+      }@empty {
+      <li><strong>la lista esta vacia</strong></li>
+    }
+  </ul>
+</div>
